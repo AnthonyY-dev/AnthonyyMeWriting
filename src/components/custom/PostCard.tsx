@@ -1,17 +1,16 @@
 import Post from "@/types/Post";
-import { Box, Text, Flex } from "@chakra-ui/react";
-import { useColorModeValue } from "../ui/color-mode";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Card, For, Stack } from "@chakra-ui/react";
+import { Card } from "@chakra-ui/react";
 import { LuText } from "react-icons/lu";
+import { Link } from "react-router-dom";
 interface Props {
   PostData: Post;
 }
 
 const PostCard = (props: Props) => {
   return (
-    <Card.Root>
+    <Card.Root maxH="500px">
       <Card.Body gap="2">
         {props.PostData.imageUrl ? (
           <Avatar
@@ -29,7 +28,9 @@ const PostCard = (props: Props) => {
         </Card.Description>
       </Card.Body>
       <Card.Footer justifyContent="flex-end">
-        <Button>Read Now</Button>
+        <Link to={"/posts/" + props.PostData.postId.toString()}>
+          <Button>Read Now</Button>
+        </Link>
       </Card.Footer>
     </Card.Root>
   );

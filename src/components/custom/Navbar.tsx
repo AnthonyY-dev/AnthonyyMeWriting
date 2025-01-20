@@ -2,6 +2,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import { Image, Text, IconButton } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "../ui/color-mode";
 import { LuSun, LuMoon } from "react-icons/lu";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
 
@@ -14,7 +15,7 @@ const Navbar = () => {
           flexDir="row"
           gap={5}
         >
-          <Image src="AnthonyLogo.svg" width={{ base: 75, md: 50 }} />
+          <Image src="/AnthonyLogo.svg" width={{ base: 75, md: 50 }} mb="1" />
 
           <Text
             fontSize={25}
@@ -28,6 +29,8 @@ const Navbar = () => {
             variant={"outline"}
             onClick={toggleColorMode}
             bottom={2}
+            right={2}
+            position={"absolute"}
           >
             {useColorModeValue(<LuSun />, <LuMoon />)}
           </IconButton>

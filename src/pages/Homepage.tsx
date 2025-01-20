@@ -1,6 +1,6 @@
 import PostCard from "@/components/custom/PostCard";
 import Post from "@/types/Post";
-import { Flex, SimpleGrid, Box } from "@chakra-ui/react";
+import { Flex, SimpleGrid } from "@chakra-ui/react";
 
 interface Props {
   Posts: Post[];
@@ -19,11 +19,9 @@ const Homepage = (props: Props) => {
         marginLeft={mLR}
         marginRight={mLR}
       >
-        <PostCard PostData={props.Posts[0]} />
-        <PostCard PostData={props.Posts[0]} />
-        <PostCard PostData={props.Posts[1]} />
-        <PostCard PostData={props.Posts[0]} />
-        <PostCard PostData={props.Posts[0]} />
+        {props.Posts.map((post) => (
+          <PostCard PostData={post}></PostCard>
+        ))}
       </SimpleGrid>
     </Flex>
   );

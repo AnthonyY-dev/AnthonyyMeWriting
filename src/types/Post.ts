@@ -5,4 +5,5 @@ export default interface Post {
     author: number;
     likes: number[];
     imageUrl?: string;
+    postId: number;
   }

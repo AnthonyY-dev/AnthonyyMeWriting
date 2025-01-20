@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import Navbar from "./components/custom/Navbar";
 import Post from "./types/Post";
 import { Flex } from "@chakra-ui/react";
+import PostPage from "./pages/PostPage";
 
 const DummyPosts: Post[] = [
   {
@@ -14,6 +15,7 @@ const DummyPosts: Post[] = [
     timestamp: 1235,
     author: 123,
     likes: [123, 514, 541],
+    postId: 3123,
   },
   {
     title: "My Second Test post!",
@@ -23,6 +25,7 @@ const DummyPosts: Post[] = [
     likes: [613, 623, 311],
     imageUrl:
       "https://plus.unsplash.com/premium_photo-1734543932716-431337d9c3c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",
+    postId: 1234,
   },
 ];
 
@@ -37,6 +40,14 @@ const App = () => {
           <Route path="/chakra" element={<>hi chakra</>} />
 
           <Route path="*" element={<>hi 404</>} />
+
+          {DummyPosts.map((post) => (
+            <Route
+              key={post.postId}
+              path={`/posts/${post.postId}`}
+              element={<PostPage PostData={post} />}
+            />
+          ))}
         </Routes>
       </Router>
     </Flex>
