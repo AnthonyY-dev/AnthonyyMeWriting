@@ -4,4 +4,5 @@ export default interface Post {
     timestamp: number;
     author: number;
     likes: number[];
+    imageUrl?: string;
   }

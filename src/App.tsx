@@ -21,6 +21,8 @@ const DummyPosts: Post[] = [
     timestamp: 6542,
     author: 5123,
     likes: [613, 623, 311],
+    imageUrl:
+      "https://plus.unsplash.com/premium_photo-1734543932716-431337d9c3c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",
   },
 ];
 

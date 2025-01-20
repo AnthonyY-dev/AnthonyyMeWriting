@@ -15,7 +15,7 @@ const Homepage = (props: Props) => {
         w="full"
         h="full"
         columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
-        gap="30px" // Ensures both row and column gaps are consistently 10px
+        gap="50px" // Ensures both row and column gaps are consistently 10px
         marginLeft={mLR}
         marginRight={mLR}
       >

@@ -27,6 +27,7 @@ const Navbar = () => {
             marginLeft={"auto"}
             variant={"outline"}
             onClick={toggleColorMode}
+            bottom={2}
           >
             {useColorModeValue(<LuSun />, <LuMoon />)}
           </IconButton>
